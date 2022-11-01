@@ -35,6 +35,9 @@ main {
   object-fit: cover;
 }
 
+.coffee_mockup img {
+}
+
 .description {
 }
 
@@ -46,6 +49,7 @@ main {
 
 .description img {
   width: 100%;
+  max-width: 660px;
 }
 
 .process {
@@ -56,19 +60,8 @@ main {
   max-width: 600px;
 }
 
-.process .font_hierarchy img {
-  max-height: 371px;
-  max-width: 664px;
-}
-
-.process .font_pairing img {
-  max-height: 411px;
-  max-width: 664px;
-}
-
-.process .ui_cards img {
-  max-height: 530px;
-  max-width: 314px;
+.process .code_examples {
+  max-width: 400px;
 }
 
 figure {
@@ -80,37 +73,6 @@ figure {
   display: flex;
   flex-direction: row;
   gap: 2rem;
-}
-
-/*Colours and Animations*/
-.colour_palette img {
-  max-width: 690px;
-}
-
-.colour_testing img {
-  max-width: 382px;
-}
-
-.colour_contrast img {
-  max-width: 690px;
-}
-
-.css_variables img {
-  max-width: 382px;
-}
-
-.animations img {
-  max-width: 300px;
-}
-
-/* Responsive Design */
-
-.respons_desktop {
-  max-width: 465px;
-}
-
-.respons_mobile {
-  max-width: 150px;
 }
 
 .grid_flex img {
@@ -127,8 +89,7 @@ figure {
 
 @media screen and (max-width: 1080px) {
   .description .desc_images {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    flex-direction: column;
   }
 }
 
