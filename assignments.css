@@ -1,0 +1,164 @@
+:root {
+    /* COLORS */
+    --primary-color1: #282C2E;
+    --primary-color2: #4A4A4A;
+    --primary-color3: #a1a1a1;
+    --primary-color4: #F7F8F8;
+    --accent-color1: #31A19A;
+    --accent-color2: #56B2AC;
+}
+
+body {
+    
+}
+
+.assignment_header h1{
+    font-size: 2.441rem;
+   
+}
+
+main {
+    /* max-width: 51.5em; */
+    margin: 0 auto;
+    width: 75vw;
+}
+
+.image_banner {
+    width: 100vw;
+    height: 70vh;
+    /* overflow: hidden; */
+    margin: 30vh 0;
+    background-color: var(--accent-color2);
+
+}
+
+.image_banner img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+}
+
+.description {
+
+}
+
+.description .desc_images {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.description  img {
+    width: 100%;
+}
+
+.process {
+
+}
+
+.process img {
+    width: 100%;
+}
+
+.process .font_hierarchy img {
+    max-height: 371px;
+    max-width: 664px;
+}
+
+.process .font_pairing img {
+    max-height: 411px;
+    max-width: 664px;
+}
+
+.process .ui_cards img {
+    max-height: 530px;
+    max-width: 314px;
+}
+
+figure {
+    margin-bottom: 2rem;
+    font-size: 0.8rem;
+}
+
+/*Colours and Animations*/
+.colour_palette img {
+    max-width: 690px;
+}
+
+.colour_testing img {
+    max-width: 382px;
+}
+
+.colour_contrast img {
+    max-width: 690px;
+}
+
+.css_variables img {
+    max-width: 382px;
+}
+
+.animations img {
+    max-width: 300px;
+}
+
+/* Responsive Design */
+
+
+
+.respons_desktop {
+    max-width: 465px;
+}
+
+.respons_mobile {
+    max-width: 150px;
+
+}
+
+.grid_flex img {
+    max-width: 658px;
+}
+
+.desktop_section img {
+    max-width: 658px;
+}
+
+.mobile_section img {
+    max-width: 280px;
+}
+
+@media screen and (max-width: 1080px) {
+    .description .desc_images {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .before {
+        grid-row: 1/2;
+        grid-column: 1/3;
+    }
+    .after {
+        grid-row: 2/3;
+        grid-column: 1/3;
+    }
+    .part1 {
+        grid-row: 3/4;
+    }
+    .part2{
+        grid-row: 3/4;
+    }
+}
+
+
+@media screen and (min-width: 480px) {
+
+    /* HEADER */   
+    .assignment_header h1 {
+        font-size: 3.052rem;
+    }
+
+    .image_banner img {
+        object-fit: contain; 
+    }
+}

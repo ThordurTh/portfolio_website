@@ -1,0 +1,290 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Cabin:400|Raleway:400");
+
+:root {
+  /* COLORS */
+  --primary-color1: #282c2e;
+  --primary-color2: #4a4a4a;
+  --primary-color3: #a1a1a1;
+  --primary-color4: #f7f8f8;
+  --accent-color1: #31a19a;
+  --accent-color2: #56b2ac;
+}
+
+html {
+  font-size: 100%; /*16px*/
+}
+
+body {
+  background: var(--primary-color1);
+  font-family: "Cabin", sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--primary-color4);
+  padding: 0 2rem;
+}
+
+p,
+a {
+  margin-bottom: 1rem;
+  color: var(--primary-color3);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 3rem 0 1.38rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.052rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+small,
+.text_small {
+  font-size: 0.8rem;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-height: 840px;
+  position: relative;
+}
+
+header nav {
+  padding: 3rem 0 4rem;
+}
+
+header nav a {
+  color: var(--primary-color4);
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+
+header h1 {
+  align-self: center;
+  font-size: 2.441rem;
+  padding-top: 0.25rem;
+}
+
+header span {
+  position: absolute;
+  width: 2rem;
+  border-bottom: 3px solid var(--accent-color1);
+  top: 132px;
+}
+
+header img {
+  width: 100%;
+}
+
+/* MAIN */
+main {
+}
+
+/* ABOUT */
+#about {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 3rem;
+}
+
+#about .about_item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#about .about_item h3 {
+  border-bottom: 3px solid var(--accent-color1);
+}
+
+#about .educations {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 0.5rem;
+}
+
+#about .educations span {
+  font-weight: bold;
+  color: var(--primary-color4);
+}
+
+#about .educations p:last-child {
+  justify-self: end;
+}
+
+#about .tools span {
+  font-weight: bold;
+  color: var(--primary-color4);
+}
+
+#about .tools p:nth-child(3),
+#about .tools p:nth-child(5) {
+  word-spacing: 1.25rem;
+}
+
+/* projects */
+#projects {
+  display: flex;
+  flex-direction: column;
+}
+
+#projects h2 {
+  grid-column: 1/3;
+}
+
+#projects img {
+  width: 100%;
+  background-color: var(--accent-color2);
+  border-radius: 5px;
+}
+
+/* LEARNED */
+
+/* FOOTER */
+footer {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  padding: 2rem 0;
+  border-top: 3px solid var(--accent-color1);
+  text-align: center;
+  gap: 1rem;
+}
+
+footer ul {
+  list-style: none;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+/*----------- DESKTOP ---------*/
+
+/* BODY MARGIN EXTRA WIDE SCREEN */
+@media screen and (min-width: 1660px) {
+  body {
+    width: 85vw;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  /* HEADER */
+  header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  header nav {
+    grid-column: 1/3;
+    text-align: right;
+  }
+
+  header nav a {
+  }
+
+  header h1 {
+    font-size: 3.052rem;
+  }
+
+  header img {
+    justify-self: end;
+    width: 85%;
+  }
+
+  /* MAIN */
+  main {
+  }
+
+  /* ABOUT */
+  #about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  /* projects */
+  #projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding-top: 5rem;
+  }
+
+  #projects h2 {
+    grid-column: 1/3;
+  }
+
+  /* LEARNED */
+  #design_for_developers {
+    padding: 3rem 0;
+  }
+
+  /* FOOTER */
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  footer ul {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+
+/* SCREEN FIXES ON A MEDIUM SCREEN */
+@media screen and (max-width: 1030px) and (min-width: 480px) {
+  #about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #about .about_me {
+    grid-row: 1/3;
+  }
+
+  #about .education {
+    grid-area: 1/2/2/3;
+  }
+
+  #about .tools {
+    grid-area: 2/2/3/3;
+  }
+}
