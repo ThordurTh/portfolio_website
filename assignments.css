@@ -15,6 +15,37 @@ body {
   font-size: 2.441rem;
 }
 
+header .back-arrow-toc {
+  position: fixed;
+  top: 3rem;
+  left: 3rem;
+}
+
+header .back-arrow-toc svg:hover {
+  fill: var(--accent-color1);
+  transition: 0.6s;
+}
+
+header .toc {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-left: -3rem;
+  margin-top: 5rem;
+  padding: 2rem 1rem;
+  background-color: var(--primary-color2);
+}
+
+header .toc a {
+  color: var(--primary-color4);
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+header .toc li {
+  list-style: none;
+}
+
 main {
   /* max-width: 51.5em; */
   margin: 0 auto;
@@ -22,17 +53,24 @@ main {
 }
 
 .image_banner {
-  width: 100vw;
+  width: 87vw;
   height: 70vh;
-  /* overflow: hidden; */
   margin: 30vh 0;
   background-color: var(--accent-color2);
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .image_banner img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  /* object-fit: cover; */
+  padding: 1rem 0;
+  object-fit: contain;
+}
+
+.hogwarts_mockup img {
 }
 
 .coffee_mockup img {
@@ -65,7 +103,7 @@ main {
 }
 
 figure {
-  margin-bottom: 2rem;
+  margin: 1rem 0 3rem;
   font-size: 0.8rem;
 }
 
@@ -85,6 +123,21 @@ figure {
 
 .mobile_section img {
   max-width: 280px;
+}
+
+.default-controls {
+  display: flex;
+  flex-direction: column;
+}
+
+.default-controls figure {
+  margin-bottom: 1rem;
+}
+
+.default-controls img {
+  max-width: 260px;
+  width: 100%;
+  margin-bottom: 0;
 }
 
 @media screen and (max-width: 1080px) {
@@ -108,6 +161,10 @@ figure {
   .part2 {
     grid-row: 3/4;
   }
+
+  .hogwarts_mockup img {
+    object-fit: contain;
+  }
 }
 
 @media screen and (min-width: 480px) {
@@ -117,6 +174,20 @@ figure {
   }
 
   .image_banner img {
-    object-fit: contain;
+  }
+  .hogwarts_mockup img {
+    /* object-fit: cover; */
+    /* width: 70%; */
+  }
+
+  .default-controls {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .back-arrow-toc {
+    display: none;
   }
 }
